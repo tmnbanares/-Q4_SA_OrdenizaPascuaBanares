@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Sign Up Forms </title>
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset=UTF-8">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Times New Roman;
+		  }
+			body{
+			background-image: linear-gradient(#a3b18a, #dad7cd);
+			margin: 90px 90px;
+			text-align: center;
+		  }
+		}
+		  .content{
+			width: 500px;
+			padding: 40px 30px;
+			background: #dde1e7;
+			border-radius: 10px;
+		  }
+		  .content .text{
+			font-size: 33px;
+			font-weight: 600;
+			margin-bottom: 35px;
+			display: inline-block;
+			color:  #588157;
+			font-weight: bold;
+			letter-spacing: 2px;
+			padding-bottom: 5px;
+			text-indent: 25px;
+			text-shadow: 2px 2px 2px black;
+			text-align: center;
+		  }
+		  .input{
+			height: 50px;
+			width: 100%;
+			display: flex;
+			position: relative;
+			margin-bottom: 20px;
+		  }
+		 
+		  .input input{
+			height: 100%;
+			width: 100%;
+			padding-left: 45px;
+			font-size: 18px;
+			background: #dde1e7;
+			color: #588157;
+			border-radius: 25px;
+		  }
+		  .input label{
+			display: none;
+		  }
+		  #button input{
+			margin: 10px 10px;
+			width: 20%;
+			height: 50px;
+			margin-bottom: 30px;
+			font-size: 18px;
+			line-height: 50px;
+			font-weight: 600;
+			background: #dde1e7;
+			border: none;
+			outline: none;
+			cursor: pointer;
+		  }
+		  #button input:focus{
+			color: #588157;
+		  }
+		  
+		  #button input:hover {
+				background-color: #3a5a40;
+				color: white;
+				}
+
+		  select{
+			height: 100%;
+			width: 100%;
+			padding-left: 45px;
+			font-size: 18px;
+			background: #dde1e7;
+			color: #588157;
+			border-radius: 25px;
+		  }
+
+		  textarea {
+			height: 100%;
+			width: 100%;
+			padding-left: 45px;
+			font-size: 18px;
+			background: #dde1e7;
+			color: #588157;
+			border-radius: 25px;
+		  }
+		  textarea {
+			height: 100%;
+			width: 100%;
+			padding-left: 45px;
+			font-size: 18px;
+			background: #dde1e7;
+			color: #588157;
+			border-radius: 25px;
+			padding-top: 20px;
+			margin-top: 10px;
+		
+		  }
+
+		  .interests label{
+			color: #588157;
+			padding: 10px;
+			font-size: 20px;
+		  }
+
+		  fieldset {
+			border: 7px solid white;
+			border-radius: 20px;
+			padding: 30px;
+		  }
+
+		  #userinput p {
+			text-align: left;
+			margin: 10px;
+			color: #3a5a40;
+			font-size: 18px;
+		  }
+
+		 
+
+	</style>
+    </head>
+    <body>
+		<div class="content">
+
+			<form>
+			<fieldset>
+				<legend class="text">Welcome! Please fill out the form below with your details to sign up.</legend>
+				  <div class="input"> 
+					  <label for="name">Name</label>
+					  <input type="text" id="name" name="name" onblur="green(this.value, this.id)" onfocus="red(this.value, this.id)"  placeholder="Name" required>
+				   </div>
+   
+			   <div class="input">
+					  <label for="userName">Username</label>
+					  <input type="text" id="userName" name="userName" onblur="green(this.value, this.id)" onfocus="red(this.value, this.id)" placeholder="Username" required>
+			   </div>
+   
+			   <div class="input">
+				  <label for="gender">Gender</label>
+				  <select name="gender" id="gender" onblur="red(this.value, this.id)" required>
+					 <option value="" disabled selected>--- Select your option ---</option>
+					 <option value="male">Male</option>
+					 <option value="female">Female</option>
+					 <option value="others">Prefer not to mention</option>
+				  </select>
+				</div>
+   
+			<div class="input">
+			   <label for="email">Email</label>
+			   <input type="email" id="email" name="email" onblur="green(this.value, this.id)" onfocus="red(this.value, this.id)" placeholder="Example: juandelacruz08@gmail.com" required>
+			</div>
+	
+			   <div class="input">
+				  <label for ="password">Password</label>
+				  <input type="password" id="password" name="password" onblur="green(this.value, this.id)" onfocus="red(this.value, this.id)" placeholder="Password" required>
+			   </div>
+   
+	
+			   <div class="input">
+				  <label for="address">Address</label>
+				  <input type="text" id="address" name="address" onblur="green(this.value, this.id)" onfocus="red(this.value, this.id)" placeholder="Address" required>
+			   </div>
+   
+			
+			<div class="interests">
+			   <label for="interests">Share your interests!</label>
+			   <textarea id="interests" name="interests" rows="2" cols="50" onblur="green(this.value, this.id)" onfocus="red(this.value, this.id)"required></textarea>
+			</div>
+   
+
+			<div id="button">
+			   <input type="reset" onclick="clear()">
+			   <input type="submit">
+			</div>
+		    </fieldset>
+
+
+			<fieldset>
+				<legend class="text"> You are now signed up! Below is the information you have provided: </legend>
+	
+				<div id="userinput">
+				<p> <b>Name:</b> <span id="name2"> </span> </p>
+				<p> <b>Username:</b> <span id="userName2"> </span> </p>
+				<p> <b>Gender:</b> <span id="gender2"> </span> </p>
+				<p> <b>Password:</b> <span id="password2"> </span> </p>
+				<p> <b>Email:</b> <span id="email2"> </span> </p>
+				<p> <b>Address:</b> <span id="address2"> </span> </p>
+				<p> <b>User's Interest:</b> <span id="interests2"> </span> </p>
+				</div>
+				</fieldset>
+
+			</form>
+   
+			<script>
+			   function green(input, id) {
+				if (input.trim() == "") {
+				  document.getElementById(id).style.borderColor = "red";
+				 }
+				  else{
+					document.getElementById(id).style.borderColor = "lime";
+				  };
+
+			   }
+
+			   function red(input, id) {
+				  if (input.trim() == "") {
+				  document.getElementById(id).style.borderColor = "red";
+				 }
+				  else{
+					document.getElementById(id).style.borderColor = "lime";
+				  };
+			   }
+
+			   function clear() {
+				document.getElementById("name").style.borderColor = "black";
+				document.getElementById("userName").style.borderColor = "black";
+				document.getElementById("gender").style.borderColor = "black";
+				document.getElementById("email").style.borderColor = "black";
+				document.getElementById("password").style.borderColor = "black";
+				document.getElementById("address").style.borderColor = "black";
+				document.getElementById("interests").style.borderColor = "black";
+				document.getElementById("name2").innerHTML = "";
+				document.getElementById("userName2").innerHTML = "";
+				document.getElementById("gender2").innerHTML = "";
+				document.getElementById("email2").innerHTML = "";
+				document.getElementById("password2").innerHTML = "";
+				document.getElementById("address2").innerHTML = "";
+				document.getElementById("interest2").innerHTML = "";
+			   }
+
+			   document.querySelector("form").addEventListener("submit", function(event) {
+				event.preventDefault();
+				document.querySelector("#name2").textContent = document.querySelector("#name").value;
+				document.querySelector("#userName2").textContent = document.querySelector("#userName").value;
+				document.querySelector("#gender2").textContent = document.querySelector("#gender").value;
+				document.querySelector("#email2").textContent = document.querySelector("#email").value;
+				document.querySelector("#password2").textContent = document.querySelector("#password").value;
+				document.querySelector("#address2").textContent = document.querySelector("#address").value;
+				document.querySelector("#interests2").textContent = document.querySelector("#interests").value;
+			   });
+			</script>
+		 </div>
+    </body>
+</html>
