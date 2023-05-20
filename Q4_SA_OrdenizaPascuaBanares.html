@@ -5,17 +5,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>NCE Mathematics Reviewer</title>
 	</head>
+	
 	<style>
 		body {
 			background-image: linear-gradient(#588157, white);
 			background-repeat: no-repeat;
 			}
-  
-  p {
+		
+   		 p {
 			font-size: 20px;
 			}
+		
 		#header {
-			
 			position: fixed;
 			top: -10px;
 			left: 0px;
@@ -28,51 +29,50 @@
 			font-size: 30px;
 			}
   
-  h1 {
-    
-  	position: relative;
-    left: 20px;
-  }
+ 		 h1 {
+  			position: relative;
+   			left: 20px;
+			  }
   
-  .mcq {
-    font-family: "Lucida Console", "Courier New", monospace;
-  	position: relative;
-    top: 20px;
-  }
+ 		 .mcq {
+  			font-family: "Lucida Console", "Courier New", monospace;
+  			position: relative;
+   			top: 20px;
+ 			 }
   
-  .Prblmsolving {
-		border: 1px solid black;
-    box-shadow: 5px 10px;
-    position: relative;
-    top: 150px;
-    border-radius: 25px; 
-    padding: 10px;
-    background: white;
-    width: 850px;
-    margin: auto;
-  }
+ 		 .Prblmsolving {
+			border: 1px solid black;
+  			box-shadow: 5px 10px;
+    			position: relative;
+    			top: 150px;
+    			border-radius: 25px; 
+    			padding: 10px;
+    			background: white;
+    			width: 850px;
+    			margin: auto;
+  			}
   
-    .mcq1, .mcq2, .mcq3, .mcq4, .mcq5, .mcq6, .mcq7, .mcq8, .mcq9, .mcq10, .mcq11, .mcq12, .mcq13, .mcq14, .mcq15 {
-  	border: 1px solid black;
-    box-shadow: 5px 10px;
-    position: relative;
-    top: 90px;
-    border-radius: 25px; 
-    padding: 10px;
-    background: white;
-    width: 850px;
-    margin: auto;
-  }
+   		 .mcq1, .mcq2, .mcq3, .mcq4, .mcq5, .mcq6, .mcq7, .mcq8, .mcq9, .mcq10, .mcq11, .mcq12, .mcq13, .mcq14, .mcq15 {
+  			border: 1px solid black;
+   		 	box-shadow: 5px 10px;
+    			position: relative;
+    			top: 90px;
+    			border-radius: 25px; 
+    			padding: 10px;
+    			background: white;
+    			width: 850px;
+    			margin: auto;
+ 			 }
    
   
-  #button {
-  	position: relative;
-    top: 350px;
-    bottom: 10px;
-    padding: 20px;
-  }
+ 		#button {
+  			position: relative;
+    			top: 350px;
+    			bottom: 10px;
+    			padding: 20px;
+  			}
 
-  .button {
+  		.button {
 			display: inline-block;
 			padding: 8px 14px ;
 			font-size: 22px;
@@ -319,11 +319,11 @@
 							  <p id="c19fb"></p><br>
 						  </div>  <br>
 						 <br>
-			    <div class="input">
+			    	<div class="input">
 							<label for="psq3">5. A storekeeper bought three grades of pencils at ₱2.00, ₱3.00, and ₱4.00 a dozen respectively. If he paid a total of ₱76.50 for them, and bought the same number of each grade, how many pencils did he buy?</label> <br> <br>
 							  <input type="psq5" id="psq5" name="psq5"required>
 							  <p id="c20fb"></p><br>
-					  </div> <br> <br>
+					 	 </div> <br> <br>
 				<input class="button" type="submit" value="Submit">
 				<input class="button" type="reset" value="Reset" onclick="valReset()"><br>
 				<p id="score"></p>
@@ -367,48 +367,49 @@
 						document.getElementById(arrId[i]).style.background = "pink";
 							}
 						}
-				if ((document.getElementById("psq1").value).toString() == "10"){
-					document.getElementById("psq1").style.backgroundColor="lightGreen";
-					pts++;
+					if ((document.getElementById("psq1").value).toString() == "10"){
+						document.getElementById("psq1").style.backgroundColor="lightGreen";
+						pts++;
 						}
-				else {
-					document.getElementById("psq1").style.backgroundColor="pink";
-					document.getElementById("c16fb").innerHTML="The correct answer is: 10";
+					else {
+						document.getElementById("psq1").style.backgroundColor="pink";
+						document.getElementById("c16fb").innerHTML="The correct answer is: 10";
 					}
-				if ((document.getElementById("psq2").value).toString() == "49"){
-					document.getElementById("psq2").style.backgroundColor="lightGreen";
-					pts++;
+					if ((document.getElementById("psq2").value).toString() == "49"){
+						document.getElementById("psq2").style.backgroundColor="lightGreen";
+						pts++;
 						}
-				else {
-					document.getElementById("psq2").style.backgroundColor="pink";
-					document.getElementById("c17fb").innerHTML="The correct answer is: 49";
-					}
-				if ((document.getElementById("psq3").value).toString() == "306"){
-					document.getElementById("psq3").style.backgroundColor="lightGreen";
-					pts++;
+					else {
+						document.getElementById("psq2").style.backgroundColor="pink";
+						document.getElementById("c17fb").innerHTML="The correct answer is: 49";
 						}
-				else {
-					document.getElementById("psq3").style.backgroundColor="pink";
-					document.getElementById("c18fb").innerHTML="The correct answer is: 306";
-					}
-				if ((document.getElementById("psq4").value).toString() == "450000"){
-					document.getElementById("psq4").style.backgroundColor="lightGreen";
-					pts++;
+					if ((document.getElementById("psq3").value).toString() == "306"){
+						document.getElementById("psq3").style.backgroundColor="lightGreen";
+						pts++;
 						}
-				else {
-					document.getElementById("psq4").style.backgroundColor="pink";
-					document.getElementById("c19fb").innerHTML="The correct answer is: 450000";
-					}
-				if ((document.getElementById("psq5").value).toString() == "1120"){
-					document.getElementById("psq5").style.backgroundColor="lightGreen";
-					pts++;
+					else {
+						document.getElementById("psq3").style.backgroundColor="pink";
+						document.getElementById("c18fb").innerHTML="The correct answer is: 306";
 						}
-				else {
-					document.getElementById("psq5").style.backgroundColor="pink";
-					document.getElementById("c20fb").innerHTML="The correct answer is: 1120";
+					if ((document.getElementById("psq4").value).toString() == "450000"){
+						document.getElementById("psq4").style.backgroundColor="lightGreen";
+						pts++;
+						}
+					else {
+						document.getElementById("psq4").style.backgroundColor="pink";
+						document.getElementById("c19fb").innerHTML="The correct answer is: 450000";
 					}
-				document.getElementById("score").innerHTML = "Your score is: " + pts + "/20";
-				return false;
+					if ((document.getElementById("psq5").value).toString() == "1120"){
+						document.getElementById("psq5").style.backgroundColor="lightGreen";
+						pts++;
+						}
+					else {
+						document.getElementById("psq5").style.backgroundColor="pink";
+						document.getElementById("c20fb").innerHTML="The correct answer is: 1120";
+					}
+				
+					document.getElementById("score").innerHTML = "Your score is: " + pts + "/20";
+					return false;
 					}
 				
 			function outReset(){
